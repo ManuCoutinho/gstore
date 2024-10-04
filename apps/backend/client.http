@@ -1,4 +1,42 @@
 GET http://localhost:3006/ping
 
 ###
-GET http://localhost:3006/ping
+GET http://localhost:3006/products
+
+###
+GET http://localhost:3006/products/29
+
+###
+POST http://localhost:3006/products
+Content-Type: application/json
+
+{
+  "name": "Placa de vídeo randeom 5400",
+  "description": "Desfrute de velocidades supersônicas com 8 núcleos e 16 threads de processamento, prontos para enfrentar os títulos mais desafiadores. Frequência base de 3,0GHz e boost dinâmico de até 4,1GHz para eliminar qualquer engasgo.",
+  "tradeMark": "AMD",
+  "model": "100-10000150TUF",
+  "rate": 3.5,
+  "image": "https://firebasestorage.googleapis.com/v0/b/formacao-dev.appspot.com/o/lancamentos%2Fgam3rstore%2Fryzen-7-5700x3d.png?alt=media&token=62caf240-b3c6-41d9-889a-c4ca882822d9",
+  "videoReview": "https://www.youtube.com/embed/ic8a_L15Z98&t=67s",
+  "tags": [
+    "Sem juros",
+    "Custo Benefício"
+  ],
+  "basePrice": 1896.99,
+  "promotionalPrice": 1189.99,
+  "minorPrice": 999.99,
+  "majorPrice": 2290.9,
+  "commonPrice": 1699.9,
+  "specifications": {
+    "peso": "243 g",
+    "Soquete": "AM4",
+    "emphasis": "AMD Ryzen 7 5700X3D",
+    "Clock básico": 3,
+    "Nº de threads": 16,
+    "Cachê L3 total": "96MB",
+    "Total de Cache L2": "4MB",
+    "Clock de Max Boost": 4.1,
+    "Temperatura máxima": "90°C",
+    "Nº de núcleos de CPU": 8
+  }
+}
