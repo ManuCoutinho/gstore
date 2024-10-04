@@ -1,0 +1,4 @@
+GET http://localhost:3006/ping
+
+###
+GET http://localhost:3006/ping

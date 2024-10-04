@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  gstore-db:
+    container_name: gstore-db
+    hostname: gstore-db
+    image: postgres:15-alpine
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_PASSWORD: senha
+      POSTGRES_USER: postgres
+      POSTGRES_DB: gstore
+    volumes:
+      - ./docker/postgres:/docker-entrypoint-initdb.db
