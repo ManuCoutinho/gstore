@@ -66,14 +66,14 @@ Content-Type: application/json
     "items": [
         {
             "quantity": 1,
-            "unityPrice": 100.00,
+            "unitPrice": 100.00,
             "product": {
                 "id": 1
             }
         },
         {
             "quantity": 1,
-            "unityPrice": 100.00,
+            "unitPrice": 100.00,
             "product": {
                 "id": 2
             }

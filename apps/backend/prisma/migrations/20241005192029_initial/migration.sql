@@ -35,7 +35,7 @@ CREATE TABLE "Order" (
 CREATE TABLE "OrderItems" (
     "id" SERIAL NOT NULL,
     "quantity" INTEGER NOT NULL,
-    "unityPrice" DOUBLE PRECISION NOT NULL,
+    "unitPrice" DOUBLE PRECISION NOT NULL,
     "orderId" INTEGER NOT NULL,
     "productId" INTEGER NOT NULL,
 

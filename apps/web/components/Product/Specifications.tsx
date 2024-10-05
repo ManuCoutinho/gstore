@@ -1,5 +1,6 @@
 import { IconTag } from "@tabler/icons-react"
 import { Tag } from "../shared/Tag"
+import { SpecificationsCard } from "./SpecificationsCard"
 import type { SpecificationsProps } from "./types"
 
 export function Specifications({ product }: SpecificationsProps) {
@@ -13,10 +14,8 @@ export function Specifications({ product }: SpecificationsProps) {
           .filter((k) => k !== "emphasis")
           .map((key) => (
             <div key={key} className='flex gap-1'>
-              <span className='p-2 w-1/3 bg-white/75 rounded'>{key}</span>
-              <span className='p-2 w-2/3 bg-white/75 rounded'>
-                {product.specifications[key]}
-              </span>
+              <SpecificationsCard size='sm' label={key} />
+              <SpecificationsCard size='lg' label={product.specifications[key]} />
             </div>
           ))}
     </div>

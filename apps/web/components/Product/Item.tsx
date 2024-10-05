@@ -6,12 +6,13 @@ import { Currency } from "@gstore/core"
 import { ReviewNote } from "../shared/ReviewNote"
 import { ROUTES } from "@/constants/routes"
 import type { ProductItemProps } from "./types"
+import { Button } from "./Button"
 
 export function ProductItem({ product }: ProductItemProps) {
   return (
     <Link
       href={`${ROUTES.PRODUCT}/${product.id}`}
-      className='flex flex-col bg-violet-dark border border-white/10 rounded-xl relative max-w-[350px]'
+      className='flex flex-col bg-violet-dark border border-white/10 rounded-xl relative max-w-[350px] active:ring focus:ring ring-violet-950 focus-visible:outline-none'
     >
       <div className='absolute flex justify-end top-2.5 right-2.5'>
         <ReviewNote rate={product.rate} />
@@ -20,7 +21,7 @@ export function ProductItem({ product }: ProductItemProps) {
         <Image
           src={product.image}
           fill
-          className='object-contain'
+          className='object-contain hover:scale-150 transition-transform will-change-transform'
           alt='Imagem do Produto'
         />
       </div>
@@ -42,20 +43,17 @@ export function ProductItem({ product }: ProductItemProps) {
                         {Moeda.formatar(parcelamento.valorParcela)}
                     </span> */}
         </div>
-        <button
-          className='
-                      flex justify-center items-center gap-2 h-8
-                      bg-violet-700 hover:border-2 border-emerald-500 rounded-full
-                    '
+        <Button
+          icon={IconShoppingCartPlus}
+          className='bg-violet-700 py-2'
           onClick={(e) => {
             e.preventDefault()
             console.log("Adicionar ao carrinho")
             // adicionarItem(product)
           }}
         >
-          <IconShoppingCartPlus size={20} />
-          <span>Adicionar</span>
-        </button>
+          Adicionar
+        </Button>
       </div>
     </Link>
   )

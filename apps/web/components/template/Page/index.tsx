@@ -2,7 +2,7 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 import type { TemplatePageProps } from './types'
 
-export function Page({ children, className, noFooter = true, noHeader = true }: TemplatePageProps): JSX.Element {
+export default function Page({ children, className, noFooter = false, noHeader = false }: TemplatePageProps) {
   return (
     <div
       className='flex flex-col min-h-screen'

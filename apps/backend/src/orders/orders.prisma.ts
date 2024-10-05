@@ -34,7 +34,7 @@ export class OrdersPrisma {
         items: {
           create: order.items.map((item) => ({
             productId: item.product.id,
-            unityPrice: item.unityPrice,
+            unitPrice: item.unitPrice,
             quantity: item.quantity,
           })),
         },

@@ -1,6 +1,8 @@
+'use client'
 import Link from "next/link";
 import { Logo } from "../../shared/Logo";
 import { CartIcon } from "../../shared/CartIcon";
+import { ROUTES } from "@/constants/routes";
 
 export function Header(): JSX.Element {
   const qty = 0
@@ -14,7 +16,7 @@ export function Header(): JSX.Element {
       <div className='flex-1 container flex flex-col justify-center'>
         <div className='flex justify-between items-center'>
           <Logo />
-          <Link href='/checkout/cart'>
+          <Link href={ROUTES.CART} className="hover:brightness-150 transition-all rounded-full focus:ring ring-violet-950 focus-visible:outline-none">
             <CartIcon itemQty={qty} />
           </Link>
         </div>

@@ -53,7 +53,7 @@ model Order {
 model OrderItems {
   id         Int   @id @default(autoincrement())
   quantity   Int
-  unityPrice Float
+  unitPrice Float
 
   order   Order @relation(fields: [orderId], references: [id])
   orderId Int
