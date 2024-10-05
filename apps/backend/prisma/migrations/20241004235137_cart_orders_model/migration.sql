@@ -1,12 +1,3 @@
-/*
-  Warnings:
-
-  - You are about to drop the `Product` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "Product";
-
 -- CreateTable
 CREATE TABLE "products" (
     "id" SERIAL NOT NULL,
@@ -54,13 +45,13 @@ CREATE TABLE "OrderItems" (
 -- CreateTable
 CREATE TABLE "DeliveryOrder" (
     "id" SERIAL NOT NULL,
-    "nome" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "cpf" TEXT NOT NULL,
-    "logradouro" TEXT NOT NULL,
-    "complemento" TEXT NOT NULL,
-    "cidade" TEXT NOT NULL,
-    "estado" TEXT NOT NULL,
+    "document" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
+    "complement" TEXT NOT NULL,
+    "city" TEXT NOT NULL,
+    "state" TEXT NOT NULL,
 
     CONSTRAINT "DeliveryOrder_pkey" PRIMARY KEY ("id")
 );

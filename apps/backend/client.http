@@ -40,3 +40,43 @@ Content-Type: application/json
     "Nº de núcleos de CPU": 8
   }
 }
+
+###
+GET http://localhost:3006/orders/1
+
+
+###
+POST http://localhost:3006/orders
+Content-Type: application/json
+
+{
+    "date": "2021-09-01T00:00:00.000Z",
+    "totalAmount": 200.00,
+    "status": "RECEIVED",
+    "paymentMethod": "CARD",
+    "delivery": {
+        "name": "Fulano",
+        "email": "fulano@email.com",
+        "document": "123.456.789-00",
+        "address": "Rua dos Bobos, 0",
+        "complement": "Apto 101",
+        "city": "São Paulo",
+        "state": "SP"
+    },
+    "items": [
+        {
+            "quantity": 1,
+            "unityPrice": 100.00,
+            "product": {
+                "id": 1
+            }
+        },
+        {
+            "quantity": 1,
+            "unityPrice": 100.00,
+            "product": {
+                "id": 2
+            }
+        }
+    ]
+}
